@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.1 on darwin)" generated="20230717 14:54:26.732" rpa="false" schemaversion="3">
+<suite id="s1" name="RobotFramework" source="/Users/uk/Documents/GitHub/RobotFramework">
+<suite id="s1-s1" name="MoodleAutomationm" source="/Users/uk/Documents/GitHub/RobotFramework/MoodleAutomationm">
+<suite id="s1-s1-s1" name="Register" source="/Users/uk/Documents/GitHub/RobotFramework/MoodleAutomationm/register.robot">
+<test id="s1-s1-s1-t1" name="Valid Login" line="10">
+<kw name="Login to page">
+<arg>udka5271</arg>
+<arg>Lucifer@1234</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230717 14:54:26.797" level="INFO">Opening browser 'Chrome' to base url 'https://moodle2.tu-ilmenau.de/course/view.php?id=4780'.</msg>
+<status status="PASS" starttime="20230717 14:54:26.797" endtime="20230717 14:55:13.061"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230717 14:55:13.063" level="INFO">Typing text 'udka5271' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20230717 14:55:13.062" endtime="20230717 14:55:15.273"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${password}</var>
+<arg>${password}\n</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230717 14:55:15.273" level="INFO">${password} = Lucifer@1234
+</msg>
+<status status="PASS" starttime="20230717 14:55:15.273" endtime="20230717 14:55:15.273"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${password}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230717 14:55:15.274" level="INFO">Lucifer@1234
+</msg>
+<status status="PASS" starttime="20230717 14:55:15.273" endtime="20230717 14:55:15.274"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230717 14:55:15.274" level="INFO">Typing text 'Lucifer@1234
+' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20230717 14:55:15.274" endtime="20230717 14:55:22.842"/>
+</kw>
+<status status="PASS" starttime="20230717 14:54:26.797" endtime="20230717 14:55:22.842"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230717 14:55:22.842" endtime="20230717 14:55:22.918"/>
+</kw>
+<status status="PASS" starttime="20230717 14:54:26.796" endtime="20230717 14:55:22.919"/>
+</test>
+<doc>Register for a course on moodle with an enrollment key</doc>
+<status status="PASS" starttime="20230717 14:54:26.743" endtime="20230717 14:55:22.919"/>
+</suite>
+<status status="PASS" starttime="20230717 14:54:26.742" endtime="20230717 14:55:22.921"/>
+</suite>
+<status status="PASS" starttime="20230717 14:54:26.734" endtime="20230717 14:55:22.923"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="RobotFramework">RobotFramework</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="MoodleAutomationm">RobotFramework.MoodleAutomationm</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Register">RobotFramework.MoodleAutomationm.Register</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
